@@ -14,8 +14,8 @@ const profileRouter = require("./routes/profile");
 const app = express();
 
 app.use(cors({
-    origin: "http://localhost:5173", // URL of your React frontend app
-    credentials: true                // Required to allow cookie passing
+    origin: process.env.FRONTEND_URL || "http://localhost:5173", 
+    credentials: true // Crucial for your HTTP-Only cookies to slide through safely!
 }));
 
 // 1. MIDDLEWARE ALWAYS GOES FIRST (Crucial for Postman req.body to work)
@@ -43,7 +43,7 @@ app.use(registerRoute);
 app.use(adminRoute);
 app.use(profileRouter)
 
-const PORT = 3000;
+const PORT = process.env.PORT || 10000;
 app.listen(PORT, () => {
     console.log(`Server is Running at PORT ${PORT}`);
 });

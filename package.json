@@ -4,8 +4,9 @@
   "description": "this is the backend NPM of face-management-system",
   "main": "app.js",
   "scripts": {
-    "test": "run kro"
-  },
+  "start": "node app.js",
+  "dev": "nodemon app.js"
+},
   "keywords": [
     "run",
     "kro"
