@@ -15,7 +15,7 @@ const app = express();
 
 app.use(cors({
     // Replace the local link with your live Vercel production domain!
-    origin: "https://your-app-name.vercel.app", 
+    origin: "https://management-system-frontend-six.vercel.app", 
     credentials: true 
 }));
 
