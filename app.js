@@ -14,8 +14,9 @@ const profileRouter = require("./routes/profile");
 const app = express();
 
 app.use(cors({
-    origin: process.env.FRONTEND_URL || "http://localhost:5173", 
-    credentials: true // Crucial for your HTTP-Only cookies to slide through safely!
+    // Replace the local link with your live Vercel production domain!
+    origin: "https://your-app-name.vercel.app", 
+    credentials: true 
 }));
 
 // 1. MIDDLEWARE ALWAYS GOES FIRST (Crucial for Postman req.body to work)
